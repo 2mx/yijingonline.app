@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <!-- Matomo -->
+  <script>
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function () {
+      var u = "//matomo.2mx.fr/";
+      _paq.push(['setTrackerUrl', u + 'matomo.php']);
+      _paq.push(['setSiteId', '1']);
+      var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+      g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
+    })();
+  </script>
+  <!-- End Matomo Code -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yi Jing (Yi King) Tirage Gratuit - Oracle Divinatoire en Ligne</title>
+  <meta name="description"
+    content="Découvrez le Yi Jing (Yi King), oracle millénaire chinois. Réalisez gratuitement un tirage d'hexagrammes en ligne. Interprétation instantanée par intelligence artificielle (ChatGPT, Claude, Gemini, Mistral). Explorez votre question avec une guidance spirituelle moderne.">
+  <meta name="keywords" content="Yi Jing, Yi King, tirage gratuit, hexagrammes, oracle chinois ,divination">
+  <meta property="og:title" content="Yi Jing (Yi King) Tirage Gratuit - Oracle Divinatoire en Ligne">
+  <meta name="twitter:title" content="Yi Jing (Yi King) Tirage Gratuit - Oracle Divinatoire en Ligne">
+  <link rel="icon" href="logo.svg">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="app.css?20241242" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <div id="app" class="content-wrapper justify-content-center">
+      <h1 class="text-center">Consulter le Yi Jing</h1>
+      <p class="text-center">
+        <a href="#what-yijing" class="hint">Bénéficier des conseils d'une sagesse millénaire</a>
+      </p>
+      <div class="mb-4 mt-4">
+        <input type="text" id="question" class="form-control p-3" placeholder="Entrez votre question ici">
+      </div>
+      <div class="hexagrams-container row">
+        <div class="col hexagram-col">
+          <div class="hexagram-wrapper">
+            <h3 id="title-original-hexagram">
+              Hex. Original</h3>
+            <div id="original-hexagram" class=""></div>
+            <p id="original-info"></p>
+          </div>
+        </div>
+        <div class="col hexagram-col">
+          <div class="hexagram-wrapper">
+            <h3 id="title-mutated-hexagram">
+              Hex. Muté</h3>
+            <div id="mutated-hexagram"></div>
+            <p id="mutated-info"></p>
+          </div>
+        </div>
+      </div>
+      <div id="toss-coin-wrapper" class="text-center mt-4">
+
+        <div id="coin-display" class="d-flex justify-content-center my-3">
+          <div id="coin-1" class="coin"></div>
+          <div id="coin-2" class="coin mx-3"></div>
+          <div id="coin-3" class="coin"></div>
+        </div>
+        <button id="toss-coin" class="btn btn-primary" disabled>
+          <span id="loading-spinner" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+          Lancer les pièces
+        </button>
+        <p class="mt-2">
+          <a class="hint" href="#yijing-explanation">Comment fonctionne un tirage ?</a>
+        </p>
+      </div>
+      <div id="askai" class="mt-4" style="display: none;">
+        <h2>Interprétation par IA</h2>
+        <div class="form-group d-flex flex-column flex-md-row align-items-md-end mb-3">
+          <div class="mb-3 me-md-3 flex-grow-1">
+            <label for="ai-choice">Choisissez une IA:</label>
+            <select id="ai-choice" class="form-select">
+              <!-- Les options seront ajoutées dynamiquement par JavaScript -->
+            </select>
+          </div>
+          <div class="mb-3 me-md-3 flex-grow-1">
+            <label for="detailLevel">Longueur de la réponse :</label>
+            <select id="detailLevel" class="form-select">
+              <!-- Les options seront ajoutées dynamiquement par JavaScript -->
+            </select>
+          </div>
+          <div class="mb-3 me-md-3 flex-grow-1">
+            <label class="form-label d-none d-md-block">&nbsp;</label>
+            <!-- Placeholder label to align button -->
+            <button id="btn-askai" class="btn btn-primary w-100 w-md-auto" data-bs-toggle="tooltip"
+              data-bs-placement="top">Faire
+              interpréter par Chat
+              GPT</button>
+          </div>
+        </div>
+        <div class="text-center">
+          <button id="new-reading" class="btn btn-secondary d-inline-flex align-items-center d-none"
+            onclick="location.reload()"><span class="material-icons md-36 me-2 align-items-center">refresh</span>
+            Nouveau Tirage</button>
+        </div>
+      </div>
+    </div>
+    <div id="content" class="content-wrapper">
+      <section>
+        <h2 id="what-yijing" class="text-center mb-4">Qu'est-ce que le Yi Jing ? </h2>
+        <p>
+          Le Yi Jing ou Yi King est un texte philosophique millénaire chinois qui repose sur l'interprétation de 64
+          hexagrammes. Ces hexagrammes sont composés de traits continus (yang) et discontinus (yin), formant un langage
+          symbolique qui capture l'essence des dynamiques qui trame une situation donnée.
+        </p>
+
+        <p>
+          Chaque hexagramme représente une énergie directrice et offre une cartographie symbolique de son potentiel
+          d'évolution. Telle une boussole spirituelle, il donne des conseils subtils pour naviguer et comprendre les
+          transformations en cours.
+        </p>
+
+        <p>
+          Utilisé comme un outil de divination ou comme un guide de sagesse ancestrale, le Yi Jing vous invite à poser
+          une question importante et à explorer les réponses qu'il propose, en révélant les courants invisibles qui
+          sous-tendent nos expériences.
+        </p>
+      </section>
+
+      <section id="yijing-explanation">
+        <h2 class="text-center mb-4 mt-5">Comment fonctionne un tirage Yi Jing ?</h2>
+
+        <ol>
+          <li>
+            <h3>Posez votre question</h3>
+            <p>
+              Prenez un moment de calme et de concentration. Formulez mentalement une question précise et ouverte, en
+              vous centrant sur votre intention.
+            </p>
+          </li>
+
+          <li>
+            <h3>Lancez le tirage</h3>
+            <p>
+              L'application reproduit la méthode traditionnelle de divination par les trois pièces (san qian fa). Chaque
+              ligne de l'hexagramme est générée par un lancé de trois pièces :
+            </p>
+
+            <ul class="mb-4">
+              <li>Pile (yang) = 3 points</li>
+              <li>Face (yin) = 2 points</li>
+            </ul>
+
+            <p>
+              En additionnant les points de chaque pièce, on obtient une ligne de l'hexagramme :
+            </p>
+
+            <ul class="mb-4">
+              <li>7 points : ligne yang</li>
+              <li>8 points : ligne yin</li>
+              <li>9 points : ligne yang mutante</li>
+              <li>6 points : ligne yin mutante</li>
+            </ul>
+
+            <p>
+              Cette méthode permet de créer progressivement les six lignes qui composeront votre hexagramme, du bas vers
+              le haut, reflétant les énergies subtiles de votre situation.
+            </p>
+
+            <p>
+              Les lignes mutantes symbolisent une transformation énergétique : leur qualité est sur le point de basculer
+              de yin à yang ou de yang à yin. En faisant muter ces lignes, on obtient un second hexagramme, dit
+              hexagramme muté, qui représente l'évolution probable de la situation.
+            </p>
+          </li>
+
+          <li>
+            <h3>Interprétez le résultat</h3>
+            <p>
+              Découvrez l'interprétation des hexagrammes avec une intelligence artificielle au choix : ChatGPT, Mistral,
+              Claude AI ou Gemini. Ces outils peuvent vous aider à explorer des pistes d'interprétation riches et
+              variées.
+            </p>
+          </li>
+        </ol>
+
+        <p class="conclusion">
+          Cette application combine tradition et modernité pour vous offrir une expérience intuitive et fidèle à
+          l'esprit du Yi Jing.
+        </p>
+      </section>
+      <section>
+        <h2 class="text-center mb-4 mt-5">Yi Jing ou Yi King ? </h2>
+        <p>
+          Yi Jing et le Yi King sont essentiellement la même chose. "Yi Jing" est la transcription pinyin du chinois,
+          tandis que "Yi King" est une transcription plus ancienne, souvent utilisée dans les textes occidentaux. Les
+          deux termes se réfèrent au même texte classique chinois, également connu sous le nom de "Livre des Mutations"
+          ou "Livre des Changements".
+        </p>
+      </section>
+    </div>
+  </div>
+  <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="app.js?r=4"></script>
+</body>
+
+</html>
