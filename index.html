@@ -74,8 +74,8 @@
       <div class="mb-4 mt-4">
         <input class="input" type="text" id="question" class="form-control p-3" placeholder="Entrez votre question ici">
       </div>
-      <div class="hexagrams-container flex justify-between">
-        <div class="hexagram-col">
+      <div class="hexagrams-container grid grid-cols-2 gap-5">
+        <div class="grow hexagram-col">
           <div class="hexagram-wrapper">
             <h3 id="title-original-hexagram">
               Hex. Original</h3>
@@ -83,7 +83,7 @@
             <p id="original-info"></p>
           </div>
         </div>
-        <div class="hexagram-col">
+        <div class="grow hexagram-col">
           <div class="hexagram-wrapper">
             <h3 id="title-mutated-hexagram">
               Hex. Muté</h3>
@@ -108,24 +108,24 @@
         </p>
       </div>
       <div id="askai" class="mt-4" style="display: none;">
-        <h2>Interprétation par IA</h2>
+        <h2 class="text-3xl">Interprétation par IA</h2>
         <div class="form d-flex flex-column flex-md-row align-items-md-end mb-3">
           <div class="mb-3 me-md-3 flex-grow-1">
             <label for="ai-choice">Choisissez une IA:</label>
-            <select id="ai-choice" class="form-select">
+            <select id="ai-choice" class="select w-full">
               <!-- Les options seront ajoutées dynamiquement par JavaScript -->
             </select>
           </div>
           <div class="mb-3 me-md-3 flex-grow-1">
             <label for="detailLevel">Longueur de la réponse :</label>
-            <select id="detailLevel" class="form-select">
+            <select id="detailLevel" class="select w-full">
               <!-- Les options seront ajoutées dynamiquement par JavaScript -->
             </select>
           </div>
           <div class="mb-3 me-md-3 flex-grow-1">
             <label class="form-label d-none d-md-block">&nbsp;</label>
             <!-- Placeholder label to align button -->
-            <button id="btn-askai" class="btn btn-primary w-100 w-md-auto" data-bs-toggle="tooltip"
+            <button id="btn-askai" class="btn-lg-primary w-full" data-bs-toggle="tooltip"
               data-bs-placement="top">Faire
               interpréter par Chat
               GPT</button>
@@ -138,9 +138,9 @@
         </div>
       </div>
     </div>
-    <div id="content" class="content-wrapper">
+    <div id="content" class="prose content-wrapper">
       <section>
-        <h2 id="what-yijing" class="text-center mb-4">Qu'est-ce que le Yi Jing ? </h2>
+        <h2 id="what-yijing" class="text-3xl text-center mb-4">Qu'est-ce que le Yi Jing ? </h2>
         <p>
           Le Yi Jing ou Yi King est un texte philosophique millénaire chinois qui repose sur l'interprétation de 64
           hexagrammes. Ces hexagrammes sont composés de traits continus (yang) et discontinus (yin), formant un langage
@@ -223,7 +223,7 @@
         </p>
       </section>
       <section>
-        <h2 class="text-center mb-4 mt-5">Yi Jing ou Yi King ? </h2>
+        <h2 class="text-3xl text-center mb-4 mt-5">Yi Jing ou Yi King ? </h2>
         <p>
           Yi Jing et le Yi King sont essentiellement la même chose. "Yi Jing" est la transcription pinyin du chinois,
           tandis que "Yi King" est une transcription plus ancienne, souvent utilisée dans les textes occidentaux. Les
