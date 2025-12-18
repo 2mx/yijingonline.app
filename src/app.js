@@ -11,8 +11,8 @@ class Hexagram {
   static mutateHexagram(hexagram) {
     const mutatedLines = hexagram.lines.map(line => {
       if (line[1] === Hexagram.MUTANT) {
-        return [line[0] === Hexagram.YANG ? Hexagram.YIN : Hexagram.YANG,
-        Hexagram.FIXED];
+        return [line[0] === Hexagram.YANG ? Hexagram.YIN: Hexagram.YANG,
+          Hexagram.FIXED];
       }
       return line;
     });
@@ -55,7 +55,7 @@ class Hexagram {
   getBinaryStringWithMutantLine() {
     const binaryString = this.getBinaryString();
     const mutantIndices = this.getMutantLineIndices().join('');
-    return mutantIndices ? `${binaryString}-${mutantIndices}` : binaryString;
+    return mutantIndices ? `${binaryString}-${mutantIndices}`: binaryString;
   }
 }
 
@@ -67,14 +67,14 @@ class Reading {
   }
 
   tossCoin() {
-    return Math.random() < 0.5 ? 2 : 3;
+    return Math.random() < 0.5 ? 2: 3;
   }
 
   readLine() {
 
     const tossResults = [this.tossCoin(),
-    this.tossCoin(),
-    this.tossCoin()];
+      this.tossCoin(),
+      this.tossCoin()];
     updateCoinsDisplayAnimation(tossResults);
 
     const sum = tossResults.reduce((acc, sum) => acc + sum,
@@ -150,7 +150,7 @@ function updateCoinsDisplay(results) {
   const coinContainerIds = ['coin-1', 'coin-2', 'coin-3'];
   results.forEach((result, index) => {
     const coinContainer = document.getElementById(coinContainerIds[index]);
-    const side = result === 2 ? 'yang' : 'ying'; // 2 pour pile, 3 pour face
+    const side = result === 2 ? 'yang': 'ying'; // 2 pour pile, 3 pour face
     coinContainer.innerHTML = `<img src="coin-${side}.svg" alt="${side}" />`;
   });
 }
@@ -168,7 +168,7 @@ function updateCoinsDisplayAnimation(results) {
   setTimeout(() => {
     coinContainerIds.forEach((id, index) => {
       const container = document.getElementById(id);
-      const side = results[index] === 2 ? 'yang' : 'ying'; // 2 pour Ying, 3 pour Yang
+      const side = results[index] === 2 ? 'yang': 'ying'; // 2 pour Ying, 3 pour Yang
 
       // Remplacer le contenu par l'image SVG
       container.innerHTML = `<img src="coin-${side}.svg" alt="${side}" />`;
@@ -219,7 +219,15 @@ class App {
         label: "Gemini",
         url: "https://gemini.google.com/app"
       }
+
     };
+
+    
+    this.tossButton.addEventListener('click',
+      () => this.onTossButtonClick());
+    this.initDetailLevelSelect();
+    this.initAISelect();
+  }
 
   async start() {
     await this.loadData();
@@ -373,8 +381,6 @@ class App {
   }
 
 }
-
-export default {};
 
 // Initialisation de l'application
 document.addEventListener('DOMContentLoaded', async () => {
