@@ -219,16 +219,7 @@ class App {
         label: "Gemini",
         url: "https://gemini.google.com/app"
       }
-
     };
-
-    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
-    this.tossButton.addEventListener('click',
-      () => this.onTossButtonClick());
-    this.initDetailLevelSelect();
-    this.initAISelect();
-  }
 
   async start() {
     await this.loadData();
@@ -382,6 +373,8 @@ class App {
   }
 
 }
+
+export default {};
 
 // Initialisation de l'application
 document.addEventListener('DOMContentLoaded', async () => {
