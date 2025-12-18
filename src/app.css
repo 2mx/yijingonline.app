@@ -17,8 +17,8 @@ html, body {
   width: 100%;
   max-width: 768px;
   padding: 20px;
+  padding-top: 0;
   box-sizing: border-box;
-  background-color: #f8f9fa;
   /* Optionnel : couleur de fond */
   border-radius: 8px;
   /* Optionnel : coins arrondis */

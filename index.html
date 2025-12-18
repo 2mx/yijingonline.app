@@ -21,7 +21,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yi Jing (Yi King) Tirage Gratuit - Oracle Divinatoire en Ligne</title>
   <meta name="description"
-    content="Découvrez le Yi Jing (Yi King), oracle millénaire chinois. Réalisez gratuitement un tirage d'hexagrammes en ligne. Interprétation instantanée par intelligence artificielle (ChatGPT, Claude, Gemini, Mistral). Explorez votre question avec une guidance spirituelle moderne.">
+  content="Découvrez le Yi Jing (Yi King), oracle millénaire chinois. Réalisez gratuitement un tirage d'hexagrammes en ligne. Interprétation instantanée par intelligence artificielle (ChatGPT, Claude, Gemini, Mistral). Explorez votre question avec une guidance spirituelle moderne.">
   <meta name="keywords" content="Yi Jing, Yi King, tirage gratuit, hexagrammes, oracle chinois ,divination">
   <meta property="og:title" content="Yi Jing (Yi King) Tirage Gratuit - Oracle Divinatoire en Ligne">
   <meta name="twitter:title" content="Yi Jing (Yi King) Tirage Gratuit - Oracle Divinatoire en Ligne">
@@ -30,17 +30,52 @@
 </head>
 
 <body>
+  <script>
+    (() => {
+      try {
+        const stored = localStorage.getItem('themeMode');
+        if (stored ? stored === 'dark': matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.documentElement.classList.add('dark');
+        }
+      } catch (_) {}
+
+      const apply = dark => {
+        document.documentElement.classList.toggle('dark', dark);
+        try {
+          localStorage.setItem('themeMode', dark ? 'dark': 'light');
+        } catch (_) {}
+      };
+
+      document.addEventListener('basecoat:theme', (event) => {
+        const mode = event.detail?.mode;
+        apply(mode === 'dark' ? true: mode === 'light' ? false: !document.documentElement.classList.contains('dark'));
+      });
+    })();
+  </script>
   <div class="container">
     <div id="app" class="content-wrapper justify-content-center">
-      <h1 class="text-center">Consulter le Yi Jing</h1>
+      <header class="py-1 flex justify-end">
+        <button
+          type="button"
+          aria-label="Toggle dark mode"
+          data-tooltip="Toggle dark mode"
+          data-side="bottom"
+          onclick="document.dispatchEvent(new CustomEvent('basecoat:theme'))"
+          class="btn-icon-outline size-8"
+          >
+          <span class="hidden dark:block"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4" /><path d="M12 2v2" /><path d="M12 20v2" /><path d="m4.93 4.93 1.41 1.41" /><path d="m17.66 17.66 1.41 1.41" /><path d="M2 12h2" /><path d="M20 12h2" /><path d="m6.34 17.66-1.41 1.41" /><path d="m19.07 4.93-1.41 1.41" /></svg></span>
+          <span class="block dark:hidden"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" /></svg></span>
+        </button>
+      </header>
+      <h1 class="text-4xl text-center">Consulter le Yi Jing</h1>
       <p class="text-center">
         <a href="#what-yijing" class="hint">Bénéficier des conseils d'une sagesse millénaire</a>
       </p>
       <div class="mb-4 mt-4">
-        <input type="text" id="question" class="form-control p-3" placeholder="Entrez votre question ici">
+        <input class="input" type="text" id="question" class="form-control p-3" placeholder="Entrez votre question ici">
       </div>
-      <div class="hexagrams-container row">
-        <div class="col hexagram-col">
+      <div class="hexagrams-container flex justify-between">
+        <div class="hexagram-col">
           <div class="hexagram-wrapper">
             <h3 id="title-original-hexagram">
               Hex. Original</h3>
@@ -48,7 +83,7 @@
             <p id="original-info"></p>
           </div>
         </div>
-        <div class="col hexagram-col">
+        <div class="hexagram-col">
           <div class="hexagram-wrapper">
             <h3 id="title-mutated-hexagram">
               Hex. Muté</h3>
@@ -59,12 +94,12 @@
       </div>
       <div id="toss-coin-wrapper" class="text-center mt-4">
 
-        <div id="coin-display" class="d-flex justify-content-center my-3">
+        <div id="coin-display" class="flex justify-center my-3">
           <div id="coin-1" class="coin"></div>
           <div id="coin-2" class="coin mx-3"></div>
           <div id="coin-3" class="coin"></div>
         </div>
-        <button id="toss-coin" class="btn btn-primary" disabled>
+        <button id="toss-coin" class="btn-lg-primary" disabled>
           <span id="loading-spinner" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
           Lancer les pièces
         </button>
@@ -74,7 +109,7 @@
       </div>
       <div id="askai" class="mt-4" style="display: none;">
         <h2>Interprétation par IA</h2>
-        <div class="form-group d-flex flex-column flex-md-row align-items-md-end mb-3">
+        <div class="form d-flex flex-column flex-md-row align-items-md-end mb-3">
           <div class="mb-3 me-md-3 flex-grow-1">
             <label for="ai-choice">Choisissez une IA:</label>
             <select id="ai-choice" class="form-select">
@@ -198,11 +233,11 @@
       </section>
     </div>
   </div>
-      <script type="module" src="/src/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
-<script>
-eruda.init();
-</script>
+  <script type="module" src="/src/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+  <script>
+    eruda.init();
+  </script>
 </body>
 
 </html>
