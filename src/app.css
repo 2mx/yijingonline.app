@@ -1,0 +1,116 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  height: 100vh;
+}
+
+#content {
+  margin-top: 25px;
+}
+
+
+.content-wrapper {
+  width: 100%;
+  max-width: 768px;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f8f9fa;
+  /* Optionnel : couleur de fond */
+  border-radius: 8px;
+  /* Optionnel : coins arrondis */
+}
+.hint {
+  color: #bbb!important;
+  text-decoration: none;
+}
+
+.coin {
+  width: 100px;
+  height: 100px;
+}
+
+@keyframes coin-flip {
+  0% {
+    transform: rotateY(0deg);
+  }
+  25% {
+    transform: rotateY(90deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  75% {
+    transform: rotateY(270deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+/*.coin-flipping {
+  animation: coin-flip 0.8s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+}*/
+
+
+
+.coin-flipping {
+  animation: coin-flip 0.7s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/*.coin-flipping {
+  animation: coin-flip-fast 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045) infinite;
+}*/
+
+.hexagrams-container {
+  min-height: 225px;
+
+}
+
+#original-hexagram {
+  min-height: 150px;
+}
+
+.hexagram-line {
+  height: 20px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.yang {
+  background-color: black;
+  width: 100%;
+}
+
+.yin {
+  background-color: black;
+  width: 45%;
+}
+
+.mutant .yang,
+.mutant .yin {
+  background-color: #4f4f4f;
+  /* Gris anthracite : #2f2f2f*/
+}
+
+.mutant::after {
+  content: "*";
+  color: red;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+@media (max-width: 575px) {
+  .container {
+    padding: 0;
+  }
+}

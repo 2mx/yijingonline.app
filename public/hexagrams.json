@@ -1,0 +1,324 @@
+{
+  "hexagrams": {
+    "111111": {
+      "number": 1,
+      "ideogram": "乾",
+      "name": "Qián"
+    },
+    "000000": {
+      "number": 2,
+      "ideogram": "坤",
+      "name": "Kūn"
+    },
+    "100010": {
+      "number": 3,
+      "ideogram": "屯",
+      "name": "Zhūn"
+    },
+    "010001": {
+      "number": 4,
+      "ideogram": "蒙",
+      "name": "Méng"
+    },
+    "111010": {
+      "number": 5,
+      "ideogram": "需",
+      "name": "Xū"
+    },
+    "010111": {
+      "number": 6,
+      "ideogram": "訟",
+      "name": "Sòng"
+    },
+    "010000": {
+      "number": 7,
+      "ideogram": "師",
+      "name": "Shī"
+    },
+    "000010": {
+      "number": 8,
+      "ideogram": "比",
+      "name": "Bǐ"
+    },
+    "111011": {
+      "number": 9,
+      "ideogram": "小畜",
+      "name": "Xiǎo Chù"
+    },
+    "110111": {
+      "number": 10,
+      "ideogram": "履",
+      "name": "Lǚ"
+    },
+    "111000": {
+      "number": 11,
+      "ideogram": "泰",
+      "name": "Tài"
+    },
+    "000111": {
+      "number": 12,
+      "ideogram": "否",
+      "name": "Pǐ"
+    },
+    "101111": {
+      "number": 13,
+      "ideogram": "同人",
+      "name": "Tóng Rén"
+    },
+    "111101": {
+      "number": 14,
+      "ideogram": "大有",
+      "name": "Dà Yǒu"
+    },
+    "001000": {
+      "number": 15,
+      "ideogram": "謙",
+      "name": "Qiān"
+    },
+    "000100": {
+      "number": 16,
+      "ideogram": "豫",
+      "name": "Yù"
+    },
+    "100110": {
+      "number": 17,
+      "ideogram": "隨",
+      "name": "Suí"
+    },
+    "011001": {
+      "number": 18,
+      "ideogram": "蠱",
+      "name": "Gǔ"
+    },
+    "110000": {
+      "number": 19,
+      "ideogram": "臨",
+      "name": "Lín"
+    },
+    "000011": {
+      "number": 20,
+      "ideogram": "觀",
+      "name": "Guān"
+    },
+    "100101": {
+      "number": 21,
+      "ideogram": "噬嗑",
+      "name": "Shì Hè"
+    },
+    "101001": {
+      "number": 22,
+      "ideogram": "賁",
+      "name": "Bì"
+    },
+    "000001": {
+      "number": 23,
+      "ideogram": "剝",
+      "name": "Bō"
+    },
+    "100000": {
+      "number": 24,
+      "ideogram": "復",
+      "name": "Fù"
+    },
+    "100111": {
+      "number": 25,
+      "ideogram": "無妄",
+      "name": "Wú Wàng"
+    },
+    "111001": {
+      "number": 26,
+      "ideogram": "大畜",
+      "name": "Dà Chù"
+    },
+    "100001": {
+      "number": 27,
+      "ideogram": "頤",
+      "name": "Yí"
+    },
+    "011110": {
+      "number": 28,
+      "ideogram": "大過",
+      "name": "Dà Guò"
+    },
+    "010010": {
+      "number": 29,
+      "ideogram": "坎",
+      "name": "Kǎn"
+    },
+    "101101": {
+      "number": 30,
+      "ideogram": "離",
+      "name": "Lí"
+    },
+    "001110": {
+      "number": 31,
+      "ideogram": "咸",
+      "name": "Xián"
+    },
+    "011100": {
+      "number": 32,
+      "ideogram": "恆",
+      "name": "Héng"
+    },
+    "001111": {
+      "number": 33,
+      "ideogram": "遯",
+      "name": "Dùn"
+    },
+    "111100": {
+      "number": 34,
+      "ideogram": "大壯",
+      "name": "Dà Zhuàng"
+    },
+    "000101": {
+      "number": 35,
+      "ideogram": "晉",
+      "name": "Jìn"
+    },
+    "101000": {
+      "number": 36,
+      "ideogram": "明夷",
+      "name": "Míng Yí"
+    },
+    "101011": {
+      "number": 37,
+      "ideogram": "家人",
+      "name": "Jiā Rén"
+    },
+    "110101": {
+      "number": 38,
+      "ideogram": "睽",
+      "name": "Kuí"
+    },
+    "001010": {
+      "number": 39,
+      "ideogram": "蹇",
+      "name": "Jiǎn"
+    },
+    "010100": {
+      "number": 40,
+      "ideogram": "解",
+      "name": "Xiè"
+    },
+    "110001": {
+      "number": 41,
+      "ideogram": "損",
+      "name": "Sǔn"
+    },
+    "100011": {
+      "number": 42,
+      "ideogram": "益",
+      "name": "Yì"
+    },
+    "111110": {
+      "number": 43,
+      "ideogram": "夬",
+      "name": "Guài"
+    },
+    "011111": {
+      "number": 44,
+      "ideogram": "姤",
+      "name": "Gòu"
+    },
+    "000110": {
+      "number": 45,
+      "ideogram": "萃",
+      "name": "Cuì"
+    },
+    "011000": {
+      "number": 46,
+      "ideogram": "升",
+      "name": "Shēng"
+    },
+    "010110": {
+      "number": 47,
+      "ideogram": "困",
+      "name": "Kùn"
+    },
+    "011010": {
+      "number": 48,
+      "ideogram": "井",
+      "name": "Jǐng"
+    },
+    "101110": {
+      "number": 49,
+      "ideogram": "革",
+      "name": "Gé"
+    },
+    "011101": {
+      "number": 50,
+      "ideogram": "鼎",
+      "name": "Dǐng"
+    },
+    "100100": {
+      "number": 51,
+      "ideogram": "震",
+      "name": "Zhèn"
+    },
+    "001001": {
+      "number": 52,
+      "ideogram": "艮",
+      "name": "Gèn"
+    },
+    "001011": {
+      "number": 53,
+      "ideogram": "漸",
+      "name": "Jiàn"
+    },
+    "110100": {
+      "number": 54,
+      "ideogram": "歸妹",
+      "name": "Guī Mèi"
+    },
+    "101100": {
+      "number": 55,
+      "ideogram": "豐",
+      "name": "Fēng"
+    },
+    "001101": {
+      "number": 56,
+      "ideogram": "旅",
+      "name": "Lǚ"
+    },
+    "011011": {
+      "number": 57,
+      "ideogram": "巽",
+      "name": "Xùn"
+    },
+    "110110": {
+      "number": 58,
+      "ideogram": "兌",
+      "name": "Duì"
+    },
+    "010011": {
+      "number": 59,
+      "ideogram": "渙",
+      "name": "Huàn"
+    },
+    "110010": {
+      "number": 60,
+      "ideogram": "節",
+      "name": "Jié"
+    },
+    "110011": {
+      "number": 61,
+      "ideogram": "中孚",
+      "name": "Zhōng Fú"
+    },
+    "001100": {
+      "number": 62,
+      "ideogram": "小過",
+      "name": "Xiǎo Guò"
+    },
+    "101010": {
+      "number": 63,
+      "ideogram": "既濟",
+      "name": "Jì Jì"
+    },
+    "010101": {
+      "number": 64,
+      "ideogram": "未濟",
+      "name": "Wèi Jì"
+    }
+  }
+}
