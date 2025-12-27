@@ -54,25 +54,24 @@
   </script>
   <div class="container">
     <div id="app" class="content-wrapper justify-content-center">
-      <header class="py-1 flex justify-end">
+      <header class="py-2 flex justify-end">
         <button
           type="button"
           aria-label="Toggle dark mode"
-          data-tooltip="Toggle dark mode"
           data-side="bottom"
           onclick="document.dispatchEvent(new CustomEvent('basecoat:theme'))"
-          class="btn-icon-outline size-8"
+          class="btn-icon-ghost size-6"
           >
           <span class="hidden dark:block"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4" /><path d="M12 2v2" /><path d="M12 20v2" /><path d="m4.93 4.93 1.41 1.41" /><path d="m17.66 17.66 1.41 1.41" /><path d="M2 12h2" /><path d="M20 12h2" /><path d="m6.34 17.66-1.41 1.41" /><path d="m19.07 4.93-1.41 1.41" /></svg></span>
           <span class="block dark:hidden"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" /></svg></span>
         </button>
       </header>
-      <h1 class="text-4xl text-center">Consulter le Yi Jing</h1>
+      <h1 class="text-3xl text-center">Consulter le Yi Jing</h1>
       <p class="text-center">
         <a href="#what-yijing" class="hint">Bénéficier des conseils d'une sagesse millénaire</a>
       </p>
       <div class="mb-4 mt-4">
-        <input class="input" type="text" id="question" class="form-control p-3" placeholder="Entrez votre question ici">
+        <input class="input p-6" type="text" id="question" placeholder="Entrez votre question ici">
       </div>
       <div class="hexagrams-container grid grid-cols-2 gap-5">
         <div class="grow hexagram-col">
@@ -99,7 +98,7 @@
           <div id="coin-2" class="coin mx-3"></div>
           <div id="coin-3" class="coin"></div>
         </div>
-        <button id="toss-coin" class="btn-lg-primary" disabled>
+        <button id="toss-coin" class="btn-lg-primary p-8 mt-4" disabled>
           <span id="loading-spinner" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
           Lancer les pièces
         </button>
@@ -108,17 +107,17 @@
         </p>
       </div>
       <div id="askai" class="mt-4" style="display: none;">
-        <h2 class="text-3xl">Interprétation par IA</h2>
-        <div class="form d-flex flex-column flex-md-row align-items-md-end mb-3">
+        <h2 class="text-2xl">Interprétation par IA</h2>
+        <div class="form d-flex flex-column flex-md-row align-items-md-end my-3">
           <div class="mb-3 me-md-3 flex-grow-1">
             <label for="ai-choice">Choisissez une IA:</label>
-            <select id="ai-choice" class="select w-full">
+            <select id="ai-choice" class="select w-full mt-2">
               <!-- Les options seront ajoutées dynamiquement par JavaScript -->
             </select>
           </div>
-          <div class="mb-3 me-md-3 flex-grow-1">
+          <div class="mb-3 mt-4 me-md-3 flex-grow-1">
             <label for="detailLevel">Longueur de la réponse :</label>
-            <select id="detailLevel" class="select w-full">
+            <select id="detailLevel" class="select w-full mt-2">
               <!-- Les options seront ajoutées dynamiquement par JavaScript -->
             </select>
           </div>
