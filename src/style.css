@@ -2,3 +2,11 @@
 @plugin "@tailwindcss/typography";
 @import "basecoat-css";
 @import "./app.css";
+
+:root {
+    --primary: var(--color-indigo-500);
+    --primary-foreground: oklch(0.969 0.016 293.756);
+    --ring: var(--color-indigo-500);
+}
+.dark {
+}
