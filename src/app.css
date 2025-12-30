@@ -20,20 +20,6 @@ body {
     height: 100vh;
 }
 
-#content {
-    margin-top: 25px;
-}
-
-.content-wrapper {
-    width: 100%;
-    max-width: 768px;
-    padding: 20px;
-    padding-top: 0;
-    box-sizing: border-box;
-    /* Optionnel : couleur de fond */
-    border-radius: 8px;
-    /* Optionnel : coins arrondis */
-}
 .hint {
     color: #bbb !important;
     text-decoration: none;

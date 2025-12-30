@@ -52,7 +52,7 @@
     })();
   </script>
   <div class="container">
-    <div id="app" class="content-wrapper justify-content-center">
+    <div id="app" class=" justify-content-center">
       <header class="py-2 flex justify-end">
         <button
           type="button"
@@ -65,77 +65,84 @@
           <span class="block dark:hidden"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" /></svg></span>
         </button>
       </header>
-      <h1 class="text-3xl text-center">Consulter le Yi Jing</h1>
-      <p class="text-center">
-        <a href="#what-yijing" class="hint">Bénéficier des conseils d'une sagesse millénaire</a>
-      </p>
-      <div class="mb-4 mt-4">
-        <input class="input p-6" type="text" id="question" placeholder="Entrez votre question ici">
-      </div>
-      <div class="hexagrams-container grid grid-cols-2 gap-5">
-        <div class="grow hexagram-col">
-          <div class="hexagram-wrapper">
-            <h3 id="title-original-hexagram">
-              Hex. Original</h3>
-            <div id="original-hexagram" class=""></div>
-            <p id="original-info"></p>
-          </div>
-        </div>
-        <div class="grow hexagram-col">
-          <div class="hexagram-wrapper">
-            <h3 id="title-mutated-hexagram">
-              Hex. Muté</h3>
-            <div id="mutated-hexagram"></div>
-            <p id="mutated-info"></p>
-          </div>
-        </div>
-      </div>
-      <div id="toss-coin-wrapper" class="text-center mt-4">
 
-        <div id="coin-display" class="flex justify-center my-3">
-          <div id="coin-1" class="coin"></div>
-          <div id="coin-2" class="coin mx-3"></div>
-          <div id="coin-3" class="coin"></div>
-        </div>
-        <button id="toss-coin" class="btn-lg-primary p-8 mt-4" disabled>
-          <span id="loading-spinner" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-          Lancer les pièces
-        </button>
-        <p class="mt-2">
-          <a class="hint" href="#yijing-explanation">Comment fonctionne un tirage ?</a>
+      <div class="m-0 p-4 pt-0 border-0">
+        
+        <h1 class="text-3xl text-center m-0 p-0">Consulter le Yi Jing</h1>
+        <p class="text-center m-0 p-0">
+          <a href="#what-yijing" class="hint">Bénéficier des conseils d'une sagesse millénaire</a>
         </p>
-      </div>
-      <div id="askai" class="mt-4" style="display: none;">
-        <h2 class="text-2xl">Interprétation par IA</h2>
-        <div class="form d-flex flex-column flex-md-row align-items-md-end my-3">
-          <div class="mb-3 me-md-3 flex-grow-1">
-            <label for="ai-choice">Choisissez une IA:</label>
-            <select id="ai-choice" class="select w-full mt-2">
-              <!-- Les options seront ajoutées dynamiquement par JavaScript -->
-            </select>
+
+
+        <div class="mb-6 mt-6">
+          <input class="input p-6" type="text" id="question" placeholder="Entrez votre question ici">
+        </div>
+        <div class="hexagrams-container grid grid-cols-2 gap-5">
+          <div class="grow hexagram-col">
+            <div class="hexagram-wrapper">
+              <h3 id="title-original-hexagram">
+                Hex. Original</h3>
+              <div id="original-hexagram" class=""></div>
+              <p id="original-info"></p>
+            </div>
           </div>
-          <div class="mb-3 mt-4 me-md-3 flex-grow-1">
-            <label for="detailLevel">Longueur de la réponse :</label>
-            <select id="detailLevel" class="select w-full mt-2">
-              <!-- Les options seront ajoutées dynamiquement par JavaScript -->
-            </select>
-          </div>
-          <div class="mb-3 me-md-3 flex-grow-1">
-            <label class="form-label d-none d-md-block">&nbsp;</label>
-            <!-- Placeholder label to align button -->
-            <button id="btn-askai" class="btn-lg-primary w-full">Faire
-              interpréter par Chat
-              GPT</button>
+          <div class="grow hexagram-col">
+            <div class="hexagram-wrapper">
+              <h3 id="title-mutated-hexagram">
+                Hex. Muté</h3>
+              <div id="mutated-hexagram"></div>
+              <p id="mutated-info"></p>
+            </div>
           </div>
         </div>
-        <div class="text-center">
-          <button id="new-reading" class="btn btn-secondary d-inline-flex align-items-center d-none"
-            onclick="location.reload()"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rotate-ccw-icon lucide-rotate-ccw"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" /><path d="M3 3v5h5" /></svg>
-            Nouveau Tirage</button>
+        <div id="toss-coin-wrapper" class="text-center mt-4">
+
+          <div id="coin-display" class="flex justify-center my-3">
+            <div id="coin-1" class="coin"></div>
+            <div id="coin-2" class="coin mx-3"></div>
+            <div id="coin-3" class="coin"></div>
+          </div>
+          <button id="toss-coin" class="btn-lg-primary p-8 mt-4" disabled>
+            <span id="loading-spinner" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            Lancer les pièces
+          </button>
+          <p class="mt-2">
+            <a class="hint" href="#yijing-explanation">Comment fonctionne un tirage ?</a>
+          </p>
+        </div>
+        <div id="askai" class="mt-4" style="display: none;">
+          <h2 class="text-2xl">Interprétation par IA</h2>
+          <div class="form d-flex flex-column flex-md-row align-items-md-end my-3">
+            <div class="mb-3 me-md-3 flex-grow-1">
+              <label for="ai-choice">Choisissez une IA:</label>
+              <select id="ai-choice" class="select w-full mt-2">
+                <!-- Les options seront ajoutées dynamiquement par JavaScript -->
+              </select>
+            </div>
+            <div class="mb-3 mt-4 me-md-3 flex-grow-1">
+              <label for="detailLevel">Longueur de la réponse :</label>
+              <select id="detailLevel" class="select w-full mt-2">
+                <!-- Les options seront ajoutées dynamiquement par JavaScript -->
+              </select>
+            </div>
+            <div class="mb-3 me-md-3 flex-grow-1">
+              <label class="form-label d-none d-md-block">&nbsp;</label>
+              <!-- Placeholder label to align button -->
+              <button id="btn-askai" class="btn-lg-primary w-full">Faire
+                interpréter par Chat
+                GPT</button>
+            </div>
+          </div>
+          <div class="text-center">
+            <button id="new-reading" class="btn btn-secondary d-inline-flex align-items-center d-none"
+              onclick="location.reload()"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rotate-ccw-icon lucide-rotate-ccw"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" /><path d="M3 3v5h5" /></svg>
+              Nouveau Tirage</button>
+          </div>
         </div>
       </div>
+
     </div>
-    <div id="content" class="prose content-wrapper">
+    <div id="content" class="card border-0 prose content-wrapper">
       <section>
         <h2 id="what-yijing" class="text-3xl text-center mb-4">Qu'est-ce que le Yi Jing ? </h2>
         <p>
