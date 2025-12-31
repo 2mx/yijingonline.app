@@ -17,3 +17,19 @@ playground-temp
 temp
 TODOs.md
 .eslintcache
+
+# Project specific
+index_old.html
+
+# Laravel / PHP
+/vendor/
+/.phpunit.result.cache
+/storage/*.key
+auth.json
+
+# Environment / Security
+.env*
+
+# Vite / Tools
+/hot
+.vite/
