@@ -4,9 +4,15 @@
 @import "./app.css";
 
 :root {
-    --primary: var(--color-indigo-500);
+    --radius: 0.625rem;
+    --background: #FDFDFD;
+    --foreground: var(--color-neutral-900);
+    /*--primary: var(--color-indigo-500);
     --primary-foreground: oklch(0.969 0.016 293.756);
-    --ring: var(--color-indigo-500);
+    --ring: var(--color-indigo-500);*/
 }
+
 .dark {
+    --background: oklch(0.145 0 0);
+    --foreground: oklch(0.985 0 0);
 }
