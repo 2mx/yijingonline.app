@@ -52,17 +52,10 @@ body {
     }
 }
 
-/*.coin-flipping {
-  animation: coin-flip 0.8s cubic-bezier(0.25, 1, 0.5, 1) infinite;
-}*/
 
 .coin-flipping {
     animation: coin-flip 0.7s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
-
-/*.coin-flipping {
-  animation: coin-flip-fast 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045) infinite;
-}*/
 
 .hexagrams-container {
     min-height: 225px;
@@ -105,10 +98,4 @@ body {
     transform: translate(-50%, -50%);
     font-size: 16px;
     font-weight: bold;
-}
-
-@media (max-width: 575px) {
-    .container {
-        padding: 0;
-    }
 }
