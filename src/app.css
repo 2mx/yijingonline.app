@@ -1,13 +1,15 @@
 :root {
     --hexagram: #000;
     --hexagram-mutated: #4f4f4f;
+    --hexagram-mutated-glyph: #c10007;
     --hexagram-placeholder: #eee;
 }
 
 .dark {
-    --hexagram: #fff;
-    --hexagram-mutated: #4f4f4f;
-    --hexagram-placeholder: #111;
+    --hexagram: #252525;
+    --hexagram-mutated: #3A3A3A;
+    --hexagram-mutated-glyph: #9f0712;
+    --hexagram-placeholder: #191919;
 }
 
 html,
@@ -96,7 +98,7 @@ body {
 
 .mutant::after {
     content: "*";
-    color: red;
+    color: var(--hexagram-mutated-glyph);
     position: absolute;
     left: 50%;
     top: 50%;
