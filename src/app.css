@@ -1,6 +1,6 @@
 :root {
-    --hexagram: #000;
-    --hexagram-mutated: #4f4f4f;
+    --hexagram: oklch(20.5% 0 0);
+    --hexagram-mutated: oklch(40% 0 0);
     --hexagram-mutated-glyph: #c10007;
     --hexagram-placeholder: #eee;
 }
