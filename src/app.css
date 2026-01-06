@@ -1,13 +1,13 @@
 :root {
     --hexagram: oklch(20.5% 0 0);
-    --hexagram-mutated: oklch(40% 0 0);
+    --hexagram-mutated: oklch(50% 0 0);
     --hexagram-mutated-glyph: #c10007;
     --hexagram-placeholder: #eee;
 }
 
 .dark {
-    --hexagram: oklch(45% 0 0);
-    --hexagram-mutated: oklch(75% 0 0);
+    --hexagram: oklch(70% 0 0);
+    --hexagram-mutated: oklch(45% 0 0);
     --hexagram-mutated-glyph: #9f0712;
     --hexagram-placeholder: #191919;
     /*#252525;*/
