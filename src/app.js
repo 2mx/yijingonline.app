@@ -186,6 +186,9 @@ class App {
     this.tossButton = document.getElementById('toss-coin');
     this.questionInput = document.getElementById('question');
     this.loadingSpinner = document.getElementById('loading-spinner');
+    this.newReadingButton = document.getElementById('new-reading');
+    this.tossWrapper = document.getElementById('toss-coin-wrapper');
+    this.askAIContainer = document.getElementById('askai');
 
     this.hexagramData = null;
     this.detailLevels = {
@@ -225,24 +228,16 @@ class App {
 
     this.tossButton.addEventListener('click',
       () => this.onTossButtonClick());
+    this.newReadingButton.addEventListener('click',
+      () => this.reset());
     this.initDetailLevelSelect();
     this.initAISelect();
   }
 
   async start() {
     await this.loadData();
-    this.reading.startDivination();
+    this.reset();
     this.loadingSpinner.style.display = 'none';
-    this.tossButton.disabled = false;
-    document.getElementById('original-hexagram').innerHTML = '';
-    document.getElementById('mutated-hexagram').innerHTML = '';
-    document.getElementById('original-info').innerHTML = '';
-    document.getElementById('mutated-info').innerHTML = '';
-
-    // Initialiser l'affichage avec 3 pièces Ying
-    updateCoinsDisplay([3,
-      3,
-      3]); // 2 correspond au côté Ying
 
 
     const aiChoice = document.getElementById('ai-choice');
@@ -378,6 +373,28 @@ class App {
 
     let url = this.aiOptions[aiChoice].url + `?q=${encodedPrompt}`;
     window.open(url, '_blank');
+  }
+
+  reset() {
+    this.reading.startDivination();
+    this.questionInput.value = '';
+    this.questionInput.disabled = false;
+
+    document.getElementById('original-hexagram').innerHTML = '';
+    document.getElementById('mutated-hexagram').innerHTML = '';
+    document.getElementById('original-info').innerHTML = '';
+    document.getElementById('mutated-info').innerHTML = '';
+
+    document.getElementById('title-original-hexagram').textContent = 'Hex. Original';
+    document.getElementById('title-mutated-hexagram').textContent = 'Hex. Muté';
+
+    this.tossWrapper.style.display = 'block';
+    this.askAIContainer.style.display = 'none';
+    this.newReadingButton.classList.add('d-none');
+    this.tossButton.disabled = false;
+
+    // Initialiser l'affichage avec 3 pièces Ying
+    updateCoinsDisplay([3, 3, 3]);
   }
 
 }
