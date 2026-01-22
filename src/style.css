@@ -1,4 +1,5 @@
-@import url("https: //fonts.googleapis.com/css2?family=Amarna:ital,wght@0,100..700;1,100..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Nanum+Myeongjo&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
+@import "tailwindcss";
 @plugin "@tailwindcss/typography";
 @import "basecoat-css";
 @import "./app.css";
@@ -19,9 +20,9 @@
 }
 
 @theme {
-    --font-playfair: "Playfair Display", serif;
-    --font-eb-garamond: "EB Garamond", serif;
-    --font-nanum-myeongjo: "Nanum Myeongjo", serif;
-    --font-noto-serif: "Noto Serif", serif;
-    --font-amarna: "Amarna", serif;
+    --font-cinzel: "Cinzel", serif;
+}
+
+.font-variant-small-caps {
+    font-variant: small-caps;
 }
