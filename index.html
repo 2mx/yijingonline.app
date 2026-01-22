@@ -21,7 +21,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yi Jing (Yi King) Tirage en Ligne</title>
   <meta name="description"
-  content="Réalisez gratuitement un tirage YiJing en ligne. Découvrez le YiJing (YiKing), oracle millénaire chinois. Interprétation par intelligence artificielle (ChatGPT, Claude, Gemini, Mistral). Explorez votre question avec une guidance spirituelle moderne.">
+    content="Réalisez gratuitement un tirage YiJing en ligne. Découvrez le YiJing (YiKing), oracle millénaire chinois. Interprétation par intelligence artificielle (ChatGPT, Claude, Gemini, Mistral). Explorez votre question avec une guidance spirituelle moderne.">
   <meta name="keywords" content="Yi Jing, Yi King, tirage gratuit, hexagrammes, oracle chinois ,divination">
   <meta property="og:title" content="Yi Jing (Yi King) Tirage en Ligne">
   <meta name="twitter:title" content="Yi Jing (Yi King) Tirage en Ligne">
@@ -30,247 +30,247 @@
   <link rel="icon" type="image/png" href="icons/favicon-32x32.png" sizes="32x32">
   <link rel="icon" type="image/png" href="icons/favicon-16x16.png" sizes="16x16">
   <link rel="icon" type="image/svg+xml" href="icons/favicon.svg" />
-<link rel="shortcut icon" href="icons/favicon.ico">
-<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
-<meta name="apple-mobile-web-app-title" content="YiJing Online">
-<link rel="manifest" href="webmanifest.json">
+  <link rel="shortcut icon" href="icons/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-title" content="YiJing Online">
+  <link rel="manifest" href="webmanifest.json">
 </head>
 
 <body>
-<script>
-(() => {
-try {
-const stored = localStorage.getItem('themeMode');
-if (stored ? stored === 'dark': matchMedia('(prefers-color-scheme: dark)').matches) {
-document.documentElement.classList.add('dark');
-}
-} catch (_) {}
+  <script>
+    (() => {
+      try {
+        const stored = localStorage.getItem('themeMode');
+        if (stored ? stored === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.documentElement.classList.add('dark');
+        }
+      } catch (_) { }
 
-const apply = dark => {
-document.documentElement.classList.toggle('dark', dark);
-try {
-localStorage.setItem('themeMode', dark ? 'dark': 'light');
-} catch (_) {}
-};
+      const apply = dark => {
+        document.documentElement.classList.toggle('dark', dark);
+        try {
+          localStorage.setItem('themeMode', dark ? 'dark' : 'light');
+        } catch (_) { }
+      };
 
-document.addEventListener('basecoat:theme', (event) => {
-const mode = event.detail?.mode;
-apply(mode === 'dark' ? true: mode === 'light' ? false: !document.documentElement.classList.contains('dark'));
-});
-})();
-</script>
-<div class="container mx-auto justify-content-center max-w-2xl ">
-<div id="app" class="h-dvh flex flex-col">
-<header class="pt-2 flex justify-end">
-<button type="button" aria-label="Toggle dark mode" data-side="bottom"
-onclick="document.dispatchEvent(new CustomEvent('basecoat:theme'))" class="btn-icon-ghost size-6">
-<span class="hidden dark:block"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-stroke-linejoin="round">
-<circle cx="12" cy="12" r="4" />
-<path d="M12 2v2" />
-<path d="M12 20v2" />
-<path d="m4.93 4.93 1.41 1.41" />
-<path d="m17.66 17.66 1.41 1.41" />
-<path d="M2 12h2" />
-<path d="M20 12h2" />
-<path d="m6.34 17.66-1.41 1.41" />
-<path d="m19.07 4.93-1.41 1.41" />
-</svg></span>
-<span class="block dark:hidden"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-stroke-linejoin="round">
-<path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
-</svg></span>
-</button>
-</header>
+      document.addEventListener('basecoat:theme', (event) => {
+        const mode = event.detail?.mode;
+        apply(mode === 'dark' ? true : mode === 'light' ? false : !document.documentElement.classList.contains('dark'));
+      });
+    })();
+  </script>
+  <div class="container mx-auto justify-content-center max-w-2xl ">
+    <div id="app" class="h-dvh flex flex-col">
+      <header class="pt-2 flex justify-end">
+        <button type="button" aria-label="Toggle dark mode" data-side="bottom"
+          onclick="document.dispatchEvent(new CustomEvent('basecoat:theme'))" class="btn-icon-ghost size-6">
+          <span class="hidden dark:block"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2" />
+              <path d="M12 20v2" />
+              <path d="m4.93 4.93 1.41 1.41" />
+              <path d="m17.66 17.66 1.41 1.41" />
+              <path d="M2 12h2" />
+              <path d="M20 12h2" />
+              <path d="m6.34 17.66-1.41 1.41" />
+              <path d="m19.07 4.93-1.41 1.41" />
+            </svg></span>
+          <span class="block dark:hidden"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+            </svg></span>
+        </button>
+      </header>
 
-<div class="m-0 p-4 pt-0 border-0">
+      <div class="m-0 p-4 pt-0 border-0">
 
-<h1 class="text-3xl font-medium text-center m-0 p-0">Consulter le Yi Jing</h1>
-<p class="text-center m-0 p-0">
-<a href="#what-yijing" class="hint">Bénéficier des conseils d'une sagesse millénaire</a>
-</p>
-
-
-<div class="mb-6 mt-6">
-<input class="input p-6" type="text" id="question" placeholder="Entrez votre question ici">
-</div>
-<div class="hexagrams-container grid grid-cols-2 gap-5 md:gap-15">
-<div class="grow hexagram-col">
-<div class="hexagram-wrapper">
-<h2 id="title-original-hexagram">
-Hex. Original</h2>
-<div id="original-hexagram" class="hexagram"></div>
-<p id="original-info"></p>
-</div>
-</div>
-<div class="grow hexagram-col">
-<div class="hexagram-wrapper">
-<h2 id="title-mutated-hexagram">
-Hex. Muté</h2>
-<div id="mutated-hexagram" class="hexagram"></div>
-<p id="mutated-info"></p>
-</div>
-</div>
-</div>
-<div id="toss-coin-wrapper" class="text-center mt-4">
-
-<div id="coin-display" class="flex justify-center my-3">
-<div id="coin-1" class="coin"></div>
-<div id="coin-2" class="coin mx-3"></div>
-<div id="coin-3" class="coin"></div>
-</div>
-<button id="toss-coin" class="btn-lg-primary p-8 mt-4" disabled>
-<svg xmlns="http://www.w3.org/2000/svg" id="loading-spinner" width="24" height="24" viewBox="0 0 24 24"
-fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-role="status" aria-label="Loading" class="size-6 animate-spin">
-<path d="M21 12a9 9 0 1 1-6.219-8.56" />
-</svg>
-Lancer les pièces
-</button>
-<p class="mt-2">
-<a class="hint" href="#yijing-explanation">Comment fonctionne un tirage ?</a>
-</p>
-</div>
-
-<div id="askai" style="display: none;">
-<div class="card border-0 px-6 py-4 mt-4">
-<h2 class="text-2xl font-medium">Interprétation par IA</h2>
-<div class="form d-flex flex-column flex-md-row align-items-md-end my-3">
-<div class="mb-3 me-md-3 flex-grow-1">
-<label for="ai-choice">Choisissez une IA:</label>
-<select id="ai-choice" class="select w-full mt-2">
-<!-- Les options seront ajoutées dynamiquement par JavaScript -->
-</select>
-</div>
-<div class="mb-3 mt-4 me-md-3 flex-grow-1">
-<label for="detailLevel">Longueur de la réponse :</label>
-<select id="detailLevel" class="select w-full mt-2">
-<!-- Les options seront ajoutées dynamiquement par JavaScript -->
-</select>
-</div>
-<div class="flex-grow-1">
-<label class="form-label d-none d-md-block">&nbsp;</label>
-<!-- Placeholder label to align button -->
-<button id="btn-askai" class="btn-lg-primary w-full">Faire
-interpréter par Chat
-GPT</button>
-</div>
-</div>
-</div>
-<div class="text-center mt-6">
-<button id="new-reading" class="btn btn-secondary d-inline-flex align-items-center d-none">
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-class="lucide lucide-rotate-ccw-icon lucide-rotate-ccw">
-<path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
-<path d="M3 3v5h5" />
-</svg>
-Nouveau Tirage</button>
-</div>
-</div>
-
-</div>
-</div>
+        <h1 class="font-nanum-myeongjo text-4xl font-medium text-center m-0 p-0">Consulter le Yi Jing</h1>
+        <p class="text-center m-0 p-0">
+          <a href="#what-yijing" class="hint">Bénéficier des conseils d'une sagesse millénaire</a>
+        </p>
 
 
-<div id="content" class="card border-0 prose dark:prose-invert content-wrapper">
-<section>
-<h2 id="what-yijing" class="text-3xl text-center mb-4">Qu'est-ce que le Yi Jing ? </h2>
-<p>
-Le Yi Jing ou Yi King est un texte philosophique millénaire chinois qui repose sur l'interprétation de 64
-hexagrammes. Ces hexagrammes sont composés de traits continus (yang) et discontinus (yin), formant un langage
-symbolique qui capture l'essence des dynamiques qui trame une situation donnée.
-</p>
+        <div class="mb-6 mt-6">
+          <input class="input p-6" type="text" id="question" placeholder="Entrez votre question ici">
+        </div>
+        <div class="hexagrams-container grid grid-cols-2 gap-5 md:gap-15">
+          <div class="grow hexagram-col">
+            <div class="hexagram-wrapper">
+              <h2 id="title-original-hexagram">
+                Hex. Original</h2>
+              <div id="original-hexagram" class="hexagram"></div>
+              <p id="original-info"></p>
+            </div>
+          </div>
+          <div class="grow hexagram-col">
+            <div class="hexagram-wrapper">
+              <h2 id="title-mutated-hexagram">
+                Hex. Muté</h2>
+              <div id="mutated-hexagram" class="hexagram"></div>
+              <p id="mutated-info"></p>
+            </div>
+          </div>
+        </div>
+        <div id="toss-coin-wrapper" class="text-center mt-4">
 
-<p>
-Chaque hexagramme représente une énergie directrice et offre une cartographie symbolique de son potentiel
-d'évolution. Telle une boussole spirituelle, il donne des conseils subtils pour naviguer et comprendre les
-transformations en cours.
-</p>
+          <div id="coin-display" class="flex justify-center my-3">
+            <div id="coin-1" class="coin"></div>
+            <div id="coin-2" class="coin mx-3"></div>
+            <div id="coin-3" class="coin"></div>
+          </div>
+          <button id="toss-coin" class="btn-lg-primary p-8 mt-4" disabled>
+            <svg xmlns="http://www.w3.org/2000/svg" id="loading-spinner" width="24" height="24" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              role="status" aria-label="Loading" class="size-6 animate-spin">
+              <path d="M21 12a9 9 0 1 1-6.219-8.56" />
+            </svg>
+            Lancer les pièces
+          </button>
+          <p class="mt-2">
+            <a class="hint" href="#yijing-explanation">Comment fonctionne un tirage ?</a>
+          </p>
+        </div>
 
-<p>
-Utilisé comme un outil de divination ou comme un guide de sagesse ancestrale, le Yi Jing vous invite à poser
-une question importante et à explorer les réponses qu'il propose, en révélant les courants invisibles qui
-sous-tendent nos expériences.
-</p>
-</section>
+        <div id="askai" style="display: none;">
+          <div class="card border-0 px-6 py-4 mt-4">
+            <h2 class="text-2xl font-medium">Interprétation par IA</h2>
+            <div class="form d-flex flex-column flex-md-row align-items-md-end my-3">
+              <div class="mb-3 me-md-3 flex-grow-1">
+                <label for="ai-choice">Choisissez une IA:</label>
+                <select id="ai-choice" class="select w-full mt-2">
+                  <!-- Les options seront ajoutées dynamiquement par JavaScript -->
+                </select>
+              </div>
+              <div class="mb-3 mt-4 me-md-3 flex-grow-1">
+                <label for="detailLevel">Longueur de la réponse :</label>
+                <select id="detailLevel" class="select w-full mt-2">
+                  <!-- Les options seront ajoutées dynamiquement par JavaScript -->
+                </select>
+              </div>
+              <div class="flex-grow-1">
+                <label class="form-label d-none d-md-block">&nbsp;</label>
+                <!-- Placeholder label to align button -->
+                <button id="btn-askai" class="btn-lg-primary w-full">Faire
+                  interpréter par Chat
+                  GPT</button>
+              </div>
+            </div>
+          </div>
+          <div class="text-center mt-6">
+            <button id="new-reading" class="btn btn-secondary d-inline-flex align-items-center d-none">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-rotate-ccw-icon lucide-rotate-ccw">
+                <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+                <path d="M3 3v5h5" />
+              </svg>
+              Nouveau Tirage</button>
+          </div>
+        </div>
 
-<section id="yijing-explanation">
-<h2 class="text-center mb-4 mt-5">Comment fonctionne un tirage Yi Jing ?</h2>
+      </div>
+    </div>
 
-<ol>
-<li>
-<h3>Posez votre question</h3>
-<p>
-Prenez un moment de calme et de concentration. Formulez mentalement une question précise et ouverte, en
-vous centrant sur votre intention.
-</p>
-</li>
 
-<li>
-<h3>Lancez le tirage</h3>
-<p>
-L'application reproduit la méthode traditionnelle de divination par les trois pièces (san qian fa). Chaque
-ligne de l'hexagramme est générée par un lancé de trois pièces :
-</p>
+    <div id="content" class="card border-0 prose dark:prose-invert content-wrapper">
+      <section>
+        <h2 id="what-yijing" class="text-3xl text-center mb-4">Qu'est-ce que le Yi Jing ? </h2>
+        <p>
+          Le Yi Jing ou Yi King est un texte philosophique millénaire chinois qui repose sur l'interprétation de 64
+          hexagrammes. Ces hexagrammes sont composés de traits continus (yang) et discontinus (yin), formant un langage
+          symbolique qui capture l'essence des dynamiques qui trame une situation donnée.
+        </p>
 
-<ul class="mb-4">
-<li>Pile (yang) = 3 points</li>
-<li>Face (yin) = 2 points</li>
-</ul>
+        <p>
+          Chaque hexagramme représente une énergie directrice et offre une cartographie symbolique de son potentiel
+          d'évolution. Telle une boussole spirituelle, il donne des conseils subtils pour naviguer et comprendre les
+          transformations en cours.
+        </p>
 
-<p>
-En additionnant les points de chaque pièce, on obtient une ligne de l'hexagramme :
-</p>
+        <p>
+          Utilisé comme un outil de divination ou comme un guide de sagesse ancestrale, le Yi Jing vous invite à poser
+          une question importante et à explorer les réponses qu'il propose, en révélant les courants invisibles qui
+          sous-tendent nos expériences.
+        </p>
+      </section>
 
-<ul class="mb-4">
-<li>7 points : ligne yang</li>
-<li>8 points : ligne yin</li>
-<li>9 points : ligne yang mutante</li>
-<li>6 points : ligne yin mutante</li>
-</ul>
+      <section id="yijing-explanation">
+        <h2 class="text-center mb-4 mt-5">Comment fonctionne un tirage Yi Jing ?</h2>
 
-<p>
-Cette méthode permet de créer progressivement les six lignes qui composeront votre hexagramme, du bas vers
-le haut, reflétant les énergies subtiles de votre situation.
-</p>
+        <ol>
+          <li>
+            <h3>Posez votre question</h3>
+            <p>
+              Prenez un moment de calme et de concentration. Formulez mentalement une question précise et ouverte, en
+              vous centrant sur votre intention.
+            </p>
+          </li>
 
-<p>
-Les lignes mutantes symbolisent une transformation énergétique : leur qualité est sur le point de basculer
-de yin à yang ou de yang à yin. En faisant muter ces lignes, on obtient un second hexagramme, dit
-hexagramme muté, qui représente l'évolution probable de la situation.
-</p>
-</li>
+          <li>
+            <h3>Lancez le tirage</h3>
+            <p>
+              L'application reproduit la méthode traditionnelle de divination par les trois pièces (san qian fa). Chaque
+              ligne de l'hexagramme est générée par un lancé de trois pièces :
+            </p>
 
-<li>
-<h3>Interprétez le résultat</h3>
-<p>
-Découvrez l'interprétation des hexagrammes avec une intelligence artificielle au choix : ChatGPT, Mistral,
-Claude AI ou Gemini. Ces outils peuvent vous aider à explorer des pistes d'interprétation riches et
-variées.
-</p>
-</li>
-</ol>
+            <ul class="mb-4">
+              <li>Pile (yang) = 3 points</li>
+              <li>Face (yin) = 2 points</li>
+            </ul>
 
-<p class="conclusion">
-Cette application combine tradition et modernité pour vous offrir une expérience intuitive et fidèle à
-l'esprit du Yi Jing.
-</p>
-</section>
-<section>
-<h2 class="text-3xl text-center mb-4 mt-5">Yi Jing ou Yi King ? </h2>
-<p>
-Yi Jing et le Yi King sont essentiellement la même chose. "Yi Jing" est la transcription pinyin du chinois,
-tandis que "Yi King" est une transcription plus ancienne, souvent utilisée dans les textes occidentaux. Les
-deux termes se réfèrent au même texte classique chinois, également connu sous le nom de "Livre des Mutations"
-ou "Livre des Changements".
-</p>
-</section>
-</div>
-</div>
-<script type="module" src="/src/main.js"></script>
+            <p>
+              En additionnant les points de chaque pièce, on obtient une ligne de l'hexagramme :
+            </p>
+
+            <ul class="mb-4">
+              <li>7 points : ligne yang</li>
+              <li>8 points : ligne yin</li>
+              <li>9 points : ligne yang mutante</li>
+              <li>6 points : ligne yin mutante</li>
+            </ul>
+
+            <p>
+              Cette méthode permet de créer progressivement les six lignes qui composeront votre hexagramme, du bas vers
+              le haut, reflétant les énergies subtiles de votre situation.
+            </p>
+
+            <p>
+              Les lignes mutantes symbolisent une transformation énergétique : leur qualité est sur le point de basculer
+              de yin à yang ou de yang à yin. En faisant muter ces lignes, on obtient un second hexagramme, dit
+              hexagramme muté, qui représente l'évolution probable de la situation.
+            </p>
+          </li>
+
+          <li>
+            <h3>Interprétez le résultat</h3>
+            <p>
+              Découvrez l'interprétation des hexagrammes avec une intelligence artificielle au choix : ChatGPT, Mistral,
+              Claude AI ou Gemini. Ces outils peuvent vous aider à explorer des pistes d'interprétation riches et
+              variées.
+            </p>
+          </li>
+        </ol>
+
+        <p class="conclusion">
+          Cette application combine tradition et modernité pour vous offrir une expérience intuitive et fidèle à
+          l'esprit du Yi Jing.
+        </p>
+      </section>
+      <section>
+        <h2 class="text-3xl text-center mb-4 mt-5">Yi Jing ou Yi King ? </h2>
+        <p>
+          Yi Jing et le Yi King sont essentiellement la même chose. "Yi Jing" est la transcription pinyin du chinois,
+          tandis que "Yi King" est une transcription plus ancienne, souvent utilisée dans les textes occidentaux. Les
+          deux termes se réfèrent au même texte classique chinois, également connu sous le nom de "Livre des Mutations"
+          ou "Livre des Changements".
+        </p>
+      </section>
+    </div>
+  </div>
+  <script type="module" src="/src/main.js"></script>
 </body>
 
 </html>
