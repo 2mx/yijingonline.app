@@ -6,8 +6,8 @@
 }
 
 .dark {
-    --hexagram: oklch(75% 0 0);
-    --hexagram-mutated: oklch(45% 0 0);
+    --hexagram: oklch(79% 0 0);
+    --hexagram-mutated: oklch(49% 0 0);
     --hexagram-mutated-glyph: #9f0712;
     --hexagram-placeholder: #191919;
     /*#252525;*/
