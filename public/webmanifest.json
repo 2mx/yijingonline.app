@@ -1,8 +1,9 @@
 {
-    "name": "Tirage du YiJing (YiKing)",
+    "name": "Tirage du YiJing",
     "short_name": "YiJing",
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
+    "theme_color": "#e5e5e5",
+    "background_color": "#121212",
+    "display": "standalone",
     "user_preferences": {
         "color_scheme": {
             "dark": {
@@ -10,7 +11,7 @@
                 "background_color": "#121212"
             },
             "light": {
-                "theme_color": "#ffffff",
+                "theme_color": "#e5e5e5",
                 "background_color": "#fdfdfd"
             }
         }
@@ -33,22 +34,6 @@
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "maskable"
-        },
-        {
-            "src": "/icons/favicon-16x16.png",
-            "sizes": "16x16",
-            "type": "image/png"
-        },
-        {
-            "src": "/icons/favicon-32x32.png",
-            "sizes": "32x32",
-            "type": "image/png"
-        },
-        {
-            "src": "/icons/apple-touch-icon.png",
-            "sizes": "180x180",
-            "type": "image/png"
         }
-    ],
-    "display": "standalone"
+    ]
 }
