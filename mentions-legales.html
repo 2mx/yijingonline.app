@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <!-- Matomo -->
+    <script>
+        var _paq = window._paq = window._paq || [];
+        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function () {
+            var u = "//matomo.2mx.fr/";
+            _paq.push(['setTrackerUrl', u + 'matomo.php']);
+            _paq.push(['setSiteId', '1']);
+            var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+            g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
+        })();
+    </script>
+    <!-- End Matomo Code -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yi Jing (Yi King) Tirage en Ligne</title>
+    <meta name="description"
+        content="Réalisez gratuitement un tirage YiJing en ligne. Découvrez le YiJing (YiKing), oracle millénaire chinois. Interprétation par intelligence artificielle (ChatGPT, Claude, Gemini, Mistral). Explorez votre question avec une guidance spirituelle moderne.">
+    <meta name="keywords" content="Yi Jing, Yi King, tirage gratuit, hexagrammes, oracle chinois ,divination">
+    <meta property="og:title" content="Yi Jing (Yi King) Tirage en Ligne">
+    <meta name="twitter:title" content="Yi Jing (Yi King) Tirage en Ligne">
+
+    <link rel="icon" type="image/png" href="icons/icon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="icons/icon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/svg+xml" href="icons/favicon.svg" />
+    <link rel="shortcut icon" href="icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="YiJing Online">
+    <link rel="manifest" href="/app.webmanifest">
+</head>
+
+<body>
+    <script>
+        (() => {
+            try {
+                const stored = localStorage.getItem('themeMode');
+                if (stored ? stored === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches) {
+                    document.documentElement.classList.add('dark');
+                }
+            } catch (_) { }
+
+            const apply = dark => {
+                document.documentElement.classList.toggle('dark', dark);
+                try {
+                    localStorage.setItem('themeMode', dark ? 'dark' : 'light');
+                } catch (_) { }
+            };
+
+            document.addEventListener('basecoat:theme', (event) => {
+                const mode = event.detail?.mode;
+                apply(mode === 'dark' ? true : mode === 'light' ? false : !document.documentElement.classList.contains('dark'));
+            });
+        })();
+    </script>
+    <div class="container mx-auto justify-content-center max-w-2xl ">
+        <div id="app" class="flex flex-col">
+            <header class="pt-2 flex justify-between items-center">
+                <a href="/" class="btn-ghost size-10 flex items-center justify-center p-0"
+                    aria-label="Retour à l'accueil">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-arrow-left">
+                        <path d="m12 19-7-7 7-7" />
+                        <path d="M19 12H5" />
+                    </svg>
+                </a>
+                <button type="button" aria-label="Toggle dark mode" data-side="bottom"
+                    onclick="document.dispatchEvent(new CustomEvent('basecoat:theme'))" class="btn-icon-ghost size-6">
+                    <span class="hidden dark:block"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="4" />
+                            <path d="M12 2v2" />
+                            <path d="M12 20v2" />
+                            <path d="m4.93 4.93 1.41 1.41" />
+                            <path d="m17.66 17.66 1.41 1.41" />
+                            <path d="M2 12h2" />
+                            <path d="M20 12h2" />
+                            <path d="m6.34 17.66-1.41 1.41" />
+                            <path d="m19.07 4.93-1.41 1.41" />
+                        </svg></span>
+                    <span class="block dark:hidden"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+                        </svg></span>
+                </button>
+            </header>
+        </div>
+        <hgroup class="mt-6">
+            <h1 class="text-center text-3xl">Mentions Légales et Conditions d'Utilisation</h1>
+            <p class="text-center text-muted">Dernière mise à jour : 28 janvier 2026</p>
+        </hgroup>
+        <article id="content" class="card border-0 mt-6 prose dark:prose-invert content-wrapper">
+
+            <section>
+                <h2>1. Édition du site</h2>
+                <p>
+                    L'application web <strong>YiJingonline.app</strong> est éditée par :<br>
+                    <strong>Laurent Melmoux</strong>, agissant en qualité d'éditeur de presse en ligne à titre non
+                    professionnel.<br>
+                    Contact : <a href="mailto:webmaster@2mx.fr">webmaster@2mx.fr</a>
+                </p>
+            </section>
+
+            <section>
+                <h2>2. Hébergement</h2>
+                <p>
+                    Le site est hébergé par la société <strong>Hostinger</strong> :<br>
+                    Siège social : Vilnius, Lituanie.<br>
+                    Contact : <a href="https://www.hostinger.com/fr/contact" target="_blank"
+                        rel="noopener">https://www.hostinger.com/fr/contact</a>
+                </p>
+            </section>
+
+            <section>
+                <h2>3. Avertissement et Responsabilité (Disclaimer)</h2>
+                <p><strong>Interprétation du Yi Jing :</strong> L'application YiJingonline.app est un outil de
+                    consultation à
+                    visée culturelle, philosophique et de divertissement. Les résultats et interprétations ne
+                    constituent en
+                    aucun cas des conseils professionnels (médicaux, juridiques, financiers ou psychologiques).
+                    L'utilisateur
+                    est seul responsable de l'usage et de l'interprétation qu'il fait des tirages.</p>
+                <p><strong>Intelligence Artificielle :</strong> Ce site peut utiliser l'Intelligence Artificielle pour
+                    générer
+                    des interprétations. L'éditeur ne garantit pas l'exactitude ni la pertinence de ces contenus
+                    automatisés.
+                    L'utilisateur accepte que ces analyses soient fournies à titre indicatif et décharge l'éditeur de
+                    toute
+                    responsabilité quant aux messages générés par l'IA.</p>
+            </section>
+
+            <section>
+                <h2>4. Cookies et traceurs</h2>
+                <p>YiJingonline.app adopte une approche respectueuse de la vie privée :</p>
+                <ul>
+                    <li><strong>Cookies techniques :</strong> Uniquement ceux nécessaires au bon fonctionnement de
+                        l'application.</li>
+                    <li><strong>Mesure d'audience :</strong> Utilisation de <strong>Matomo</strong> en mode
+                        auto-hébergé,
+                        garantissant la confidentialité et la souveraineté des données (conforme aux recommandations de
+                        la CNIL
+                        pour l'exemption de consentement).</li>
+                    <li><strong>Publicité :</strong> Aucun cookie publicitaire n'est utilisé.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>5. Données personnelles</h2>
+                <p>Le site ne collecte aucune donnée personnelle sans votre consentement explicite. Aucune base de
+                    données
+                    nominative n'est constituée à partir de la simple navigation.</p>
+            </section>
+
+            <section>
+                <h2>6. Propriété intellectuelle</h2>
+                <p>L'ensemble du contenu (textes, graphismes, code, logos) est la propriété exclusive de <strong>Laurent
+                        Melmoux</strong>, sauf mention contraire.</p>
+                <p>Toute reproduction ou représentation totale ou partielle de ce site, par quelque procédé que ce soit,
+                    sans
+                    l'autorisation expresse de l'auteur est interdite et constituerait une contrefaçon sanctionnée par
+                    le Code
+                    de la propriété intellectuelle.</p>
+            </section>
+
+        </article>
+    </div>
+    <footer class="text-center py-8 bg-card mt-8 border-t border-border">
+        <p class="text-sm text-muted-foreground">
+            Copyright © 2026. Tous droits réservés.
+            <br class="md:hidden">
+            <a href="/" class="hover:underline ml-0 md:ml-4">Tirage YiJing</a>
+        </p>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
